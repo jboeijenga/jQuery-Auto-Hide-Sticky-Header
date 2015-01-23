@@ -1,0 +1,118 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/*********
+* generic styles
+**********/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+  font-family: 'Open Sans', sans-serif;
+  color: #353737;
+  padding: 8em 0 5em 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 40em;
+  min-width: 12em;
+  padding: 0 1.25em;
+  margin: 0 auto;
+}
+
+.header .container {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*********
+* header styles
+**********/
+
+.header {
+  color: #949494;
+  width: 100%;
+  height: 7.5em;
+  text-align: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  -moz-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -moz-transition-property: height, top, background;
+  -o-transition-property: height, top, background;
+  -webkit-transition-property: height, top, background;
+  transition-property: height, top, background;
+  -moz-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+  -webkit-box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+  box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+}
+
+.header.scroll {
+  height: 5em;
+  background : rgba(255,255,255,.9);
+}
+.header.hidden {
+  top: -5em;
+}
+
+
+/*********
+* nav styles
+**********/
+
+.header nav {
+  height: 100%;
+  display: table;
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+nav ul li {
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-left: .625em;
+}
+
+nav ul li a {
+  height: 2.5em;
+  line-height: 2.5em;
+  display: block;
+  padding: 0 0.625em;
+  color: inherit;
+  text-decoration: none;
+  z-index: 1;
+}
+
+nav ul li a:hover {
+  background-color: #f0ccbf;
+}
+
+nav ul li a:hover, 
+nav ul li.active a {
+  color: #fff;
+}
+
+nav ul li.active a {
+  background-color: #D36943;
+  font-weight: bold;
+}
